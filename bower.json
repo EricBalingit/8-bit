@@ -1,0 +1,18 @@
+{
+  "name": "8-bit",
+  "homepage": "https://github.com/epistemex/8-bit",
+  "authors": [
+    "epistemex <github@epistemex.com>"
+  ],
+  "description": "8-bit / Retro HTML5 Canvas Context",
+  "main": "8bit.min.js",
+  "keywords": [
+    "8-bit", "retro", "html5", "canvas", "context", "audio", "graphics", "old school"
+  ],
+  "license": "TBA",
+  "ignore": [
+    "**/.*",
+    "tests",
+    "tuts"
+  ]
+}

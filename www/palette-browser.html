@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>8-bit Palette Browser</title>
+	<style>
+		html, body {font:14px sans-serif;margin:0; overflow:auto;background:#bbb; width:100%}
+		h2 {margin: 7px 0 10px 7px; font-size:28px;font-weight:normal}
+		#info {
+			display:none;
+			position:fixed;
+			background-color:#ddd;
+			pointer-events:none;
+			padding:5px 7px;
+			border:1px solid #000;
+			border-radius: 4px;
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+			}
+		.spot {
+			width:150px;
+			height:32px;
+			border:1px solid #000;
+			margin-top:4px;
+			border-radius: 4px;
+			}
+	</style>
+</head>
+<body>
+
+<h2>8-bit Palette Browser</h2>
+<canvas id="c"></canvas>
+<div id="info"></div>
+
+<script src="../8bit.min.js"></script>
+<script>
+
+	var ctx = c.getContext("2d"),
+		key, p = _8bit.Palettes,
+		stepX = 18, stepY = 22, xx = 160,
+		keys = Object.keys(p).sort(),
+		items = keys.length,
+		regions, timer, timer2;
+
+	draw();
+
+	window.onresize = function() {
+		cancelAnimationFrame(timer);
+		timer = requestAnimationFrame(draw)
+	};
+
+	function draw() {
+
+		// calc height
+		var y = 2;
+
+		c.width = Math.max(800, window.innerWidth - 20);
+
+		keys.forEach(function(key) {
+			for(var i = 0, x = xx, arr = p[key]; i < arr.length; i++) {
+				x += stepX;
+				if (x + stepX > c.width) {
+					x = xx;
+					y += stepY - 4
+				}
+			}
+			y += stepY
+		});
+
+		c.height = Math.max(600, y);
+
+		y = 2;
+
+		ctx.translate(0.5, 0.5);
+		ctx.font = "14px sans-serif";
+		ctx.textBaseline = "top";
+
+		regions = [];
+
+		keys.forEach(function(key) {
+			ctx.fillStyle = "#000";
+			ctx.fillText(key + " (" + p[key].length + ")", 7, y);
+
+			for(var i = 0, x = xx, arr = p[key], col; i < arr.length; i++) {
+				col = new _8bit.Color(arr[i]);
+				ctx.fillStyle = col.toStyle();
+				ctx.fillRect(x, y, stepX-2, stepX-2);
+				ctx.rect(x, y, stepX-2, stepX-2);
+
+				regions.push({
+					name: key,
+					index: i,
+					value: {r:col.r, g:col.g, b:col.b},
+					x: x,
+					y: y,
+					w: stepX-2,
+					h: stepX-2
+				});
+
+				x += stepX;
+				if (x + stepX > c.width) {
+					x = xx;
+					y += stepY - 4
+				}
+			}
+			y += stepY
+		});
+
+		ctx.stroke();
+	}
+
+	c.onmousemove = function(e) {
+
+		cancelAnimationFrame(timer);
+		timer = requestAnimationFrame(function() {
+
+			var rect = c.getBoundingClientRect(),
+			    x = e.clientX - rect.left,
+			    y = e.clientY - rect.top,
+				hit = false, i = 0, r;
+
+			info.style.left = Math.min(window.innerWidth - 190, e.clientX + 20) + "px";
+			info.style.top = Math.min(window.innerHeight - 110, e.clientY + 20) + "px";
+
+			while(r = regions[i++]) {
+				if (x >= r.x && x <= r.x + r.w && y >= r.y - 2 && y < r.y + r.h + 4) {
+					info.style.display = "block";
+					info.innerHTML = "Palette: <b>" + r.name + "</b><br>Index: <b>" + r.index + "</b><br>R:" + r.value.r + " G:" + r.value.g + " B:" + r.value.b +
+									"<br><div class=spot style='background-color:rgb(" + r.value.r + "," + r.value.g + "," + r.value.b + ")'></div>";
+					hit = true;
+					break
+				}
+			}
+
+			clearTimeout(timer2);
+
+			if (!hit)
+				timer2 = setTimeout(function() {info.style.display = "none"}, 100);
+		});
+	};
+
+</script>
+</body>
+</html>

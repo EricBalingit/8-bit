@@ -1,0 +1,25 @@
+Change log for 8-bit
+--------------------
+
+0.4.0
+REL: Re-release on github
+
+0.3.0
+ADD: polyfill/support for canvas.probablySupportCanvas() taking 8-bit context into account (can be disabled)
+CHG: Compressed palette definitions further
+FIX: Palette parsing array would fail if entry was 0 (not a problem with uncompressed palette entries due to no alpha)
+
+0.2.0
+ADD: Clipping for drawImage() using regular Image
+ADD: Composite operation added (no blending modes due to color processing)
+ADD: more palettes incl. some classic game palettes (typical)
+FIX: Rounding errors with fill (even-odd)
+
+0.1.1
+MSC: To allow NPM update...
+
+0.1.0 ALPHA
+NEW: Initial release
+
+
+(c) 2013-2016 Epistemex
