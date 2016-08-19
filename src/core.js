@@ -1,5 +1,5 @@
 /*!
-	8-bit ver 0.4.0 alpha
+	8-bit ver 0.4.1 alpha
 	(c) 2013-2016 Epistemex
 	www.epistemex.com
 	Copyrighted. Preview version! No license given at this point.
@@ -23,7 +23,6 @@
 function _8bit(canvas, options) {
 
 	"use strict";
-
 
 	var me = this,
 
@@ -91,7 +90,7 @@ function _8bit(canvas, options) {
 	def("globalCompositeOperation", function() {return intRender.ctx.globalCompositeOperation}, setCompMode);
 	def("imageSmoothingEnabled", function() {return state.imageSmoothingEnabled}, function(s) {state.imageSmoothingEnabled = !!s});
 	def("imageSmoothingQuality", function() {return state.imageSmoothingQuality}, function(s) {
-		if (["low", "medium", "high"].indexOf(s) > -1) state.imageSmoothingQuality = s;
+		state.imageSmoothingQuality = ["low", "medium", "high"].indexOf(s) < 0 ? "low" : s
 	});
 
 	def("strokeStyle", function() {return state.styles[styleDest.stroke].original}, function(s) {setStyle(s, styleDest.stroke)});
@@ -193,6 +192,10 @@ function _8bit(canvas, options) {
 		//todo clip()
 	};
 
+	this.resetClip = function() {
+		//todo resetClip()
+	};
+
 	/*------------------------------------------------------------------
 
 		Non-Path methods - draws directly to canvas
@@ -224,7 +227,6 @@ function _8bit(canvas, options) {
 				w = dw;
 				h = dh;
 				idata = _8bit.Image.convert(tmp.canvas, w, h, me);
-
 			}
 			else {
 				idata = img.__8bit || _8bit.Image.convert(img, w || img.naturalWidth || img.width, h || img.naturalHeight || img.height, me);
@@ -386,9 +388,7 @@ function _8bit(canvas, options) {
 				"xor", "copy"],
 			i = modes.indexOf(m);
 
-		if (i > -1) {
-			intRender.ctx.globalCompositeOperation = m
-		}
+		intRender.ctx.globalCompositeOperation = i < 0 ? modes[0] : m;
 	}
 
 	/*------------------------------------------------------------------
@@ -427,7 +427,7 @@ function _8bit(canvas, options) {
 
 	/*------------------------------------------------------------------
 
-		"ALL YOUR BASE ARE BELONG TO US!" (or system patches/"takeovers"
+		ALL YOUR BASE ARE BELONG TO US! (or system patches/"takeovers")
 
 	------------------------------------------------------------------*/
 

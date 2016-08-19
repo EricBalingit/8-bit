@@ -230,7 +230,7 @@ _8bit.Shaders.Pixelated.prototype = {
 					// - get center point between two x's
 					// - cast ray left and right, count windings and direction
 					// - if !0 add to new array
-					// ? move this to separate function so it can be embedded in the intersection stage
+					// - move this to separate function so it can be embedded in the intersection stage
 
 					// even-odd ranges
 					for(t = 0; t < pts.length - 1; t += 2) {

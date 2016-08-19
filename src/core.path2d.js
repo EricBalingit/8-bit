@@ -123,9 +123,9 @@ _8bit.Path2D.prototype = {
 			t2 = (y2 - y1) / (x2 - x1),
 			t = Math.atan((t1 - t2) / (1 + t1 * t2)),
 			th = rx / Math.tan(t * 0.5),
-			xi =  Math.abs(Math.sqrt(th * th / (1 + t1 * t1))),
+			xi = Math.abs(Math.sqrt(th * th / (1 + t1 * t1))),
 			yi = Math.abs(xi * t1),
-			xi1 =  x1 > x0 ? x1 - xi : x1 + xi,
+			xi1 = x1 > x0 ? x1 - xi : x1 + xi,
 			yi1 = y1 > y0 ? y1 - yi : y1 + yi,
 			t1i = -1 / t1,
 			xi2, yi2, cx, cy;

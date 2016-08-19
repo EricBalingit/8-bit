@@ -47,6 +47,38 @@ Includes polyfills for regular 2D context to enable support for ellipse() etc.
 ![http://i.imgur.com/uyuWAqc.png](http://i.imgur.com/uyuWAqc.png)
 
 
+Brief History
+-------------
+
+8-bit started out as retro-canvas a few years back. The original retro context
+was rooted in more or less the old method of setting things like colors using
+background color, foreground color, and also had its own method names and 
+so forth. It was an experiment at the time to produce in particular
+non-aliased vector graphics (lines, paths etc.) and had indexed palette
+and dithering added to it as it went on.
+
+It was later decided to scrap the first model and build a context that would
+be 100% compatible with the 2D context, argument wise, so you could actually
+run existing code just replacing the context type. The difference of course
+being that the result would look and feel like retro, or 8-bit if you will.
+It got rebuilt from scratch as a weekend-project with new strategies involved
+such as using existing composition mechanisms to enhance capabilities and
+performance. 
+
+It's still an experiment though and currently it has only implemented the needed
+internal pieces without any particular optimizations. Depending on the interest 
+the project may get allocated more resources and time to grow into something
+useful for perhaps games etc. but its main purpose is for it to be used
+as a building block in generating tools that can easily generate 8-bit
+graphics. Or at least, that is what it's most realistically capable of at
+the moment as running full games with lots of action is probably gonna be 
+too much considering it's using JavaScript to process the data at multiple
+stages. But never say never.. it can run simpler things pretty well due to
+the low resolution implied.
+
+We'll keep on experimenting and see what we can squeeze out of it.
+
+
 Install
 -------
 
@@ -72,9 +104,9 @@ are the same as with 2D canvas, but using palette and low resolution instead.
     var ctx = canvas.getContext("8-bit");
     ...
 
-**(N/A:)** For audio, simply load the audio file using the audio loader. The loaded audio is
-then handed over to you on a silver plate which brings back the good old HIFI of the past
-to your speakers.
+**(N/A:)** For audio, simply load the audio file using the audio loader. 
+The loaded audio is then handed over and brings back the good old crunchy
+"HIFI" of the past to your speakers.
 
 More info coming later - star and follow to keep yourself updated!
 
@@ -94,8 +126,8 @@ object works only with the 8-bit context:
 - _8bit.Gradient
 
 You *can* use regular images (and video etc.) with the drawImage() method
-but it will require the image source to be dithered on the fly which is
-more performance hungry than using the _8bit.Image instance.
+but it will require the image source to be dithered on the fly which takes
+a higher performance-hit than using the _8bit.Image instance.
 
 For patterns and gradients you won't notice much difference than with 2D
 context as you will use the createPattern() and create*Gradient() methods.
@@ -117,6 +149,7 @@ Known Issues
 - In need of a ton of optimizations for image dithering, polygon fill etc.
 - Not all features are documented yet. Refer to regular [2D context documentation](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D) as well as the included Quick Setup (see docs) for general usage.
 
+
 Issues
 ------
 
@@ -133,6 +166,6 @@ the moment. Copyright reserved. Contact us directly (github@epistemex.com)
 with questions about licensing and usage.
 
 
-*&copy; Epistemex 2016*
+*&copy; Epistemex 2013-2016*
  
 ![Epistemex](http://i.imgur.com/wZSsyt8.png)

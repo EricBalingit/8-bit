@@ -246,7 +246,8 @@ _8bit.Color.prototype = {
 	 * @private
 	 */
 	rgb2int: function(r, g, b) {
-		return 0xff000000 + (b << 16) + (g << 8) + r
+		//todo can remove these parenthesis (dblcheck)
+		return 0xff000000 | (b << 16) | (g << 8) | r
 	},
 
 	/**

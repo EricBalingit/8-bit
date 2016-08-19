@@ -1,6 +1,10 @@
 Change log for 8-bit
 --------------------
 
+0.4.1
+FIX: default comp mode source-over if mode not supported
+FIX: imageSmoothingQuality defaults to low if mode not supported
+
 0.4.0
 REL: Re-release on github
 
