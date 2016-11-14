@@ -3,126 +3,109 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
 	<title>8-bit Class: Color</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-	<link type="text/css" rel="stylesheet" href="styles/sunlight.dark.css">
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
 
-	<link type="text/css" rel="stylesheet" href="styles/site.cerulean.css">
+	<link type="text/css" rel="stylesheet" href="styles/site.lumen.css">
 
 </head>
 
 <body>
-<div class="container-fluid">
-	<div class="navbar navbar-fixed-top ">
-		<div class="navbar-inner">
-			<a class="brand" href="index.html">8-bit</a>
-			<ul class="nav">
-				
-				<li class="dropdown">
-					<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b
-						class="caret"></b></a>
 
-					<ul class="dropdown-menu ">
-						
-						<li>
-							<a href="-_8bit.html">_8bit</a>
-						</li>
-						
-						<li>
-							<a href="-_8bit.Color.html">_8bit.Color</a>
-						</li>
-						
-						<li>
-							<a href="-_8bit.Matrix.html">_8bit.Matrix</a>
-						</li>
-						
-						<li>
-							<a href="-_8bit.Palette.html">_8bit.Palette</a>
-						</li>
-						
-						<li>
-							<a href="-_8bit.Path2D.html">_8bit.Path2D</a>
-						</li>
-						
-
-					</ul>
-				</li>
-				
-				<li class="dropdown">
-					<a href="tutorials.list.html" class="dropdown-toggle" data-toggle="dropdown">Tutorials<b
-						class="caret"></b></a>
-
-					<ul class="dropdown-menu ">
-						
-						<li>
-							<a href="tutorial-Quick Setup.html">Quick Setup</a>
-						</li>
-						
-
-					</ul>
-				</li>
-				
-				<li class="dropdown">
-					<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b
-						class="caret"></b></a>
-
-					<ul class="dropdown-menu ">
-						
-						<li>
-							<a href="global.html#8-bitContextforHTML5Canvas.">8-bit Context for HTML5 Canvas.</a>
-						</li>
-						
-						<li>
-							<a href="global.html#NO8BITPATCH">NO8BITPATCH</a>
-						</li>
-						
-
-					</ul>
-				</li>
-				
-			</ul>
-		</div>
+<div class="navbar navbar-default navbar-fixed-top ">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">8-bit</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="-_8bit.html">_8bit</a></li><li><a href="-_8bit.Color.html">_8bit.Color</a></li><li><a href="-_8bit.Matrix.html">_8bit.Matrix</a></li><li><a href="-_8bit.Palette.html">_8bit.Palette</a></li><li><a href="-_8bit.Path2D.html">_8bit.Path2D</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="tutorials.list.html" class="dropdown-toggle" data-toggle="dropdown">Tutorials<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="tutorial-Quick Setup.html">Quick Setup</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html#8-bitContextforHTML5Canvas.">8-bit Context for HTML5 Canvas.</a></li><li><a href="global.html#NO8BITPATCH">NO8BITPATCH</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+		<div class="col-sm-3 col-md-3">
+            <form class="navbar-form" role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
 	</div>
 
-	<div class="row-fluid">
+</div>
+</div>
 
-		
-		<div class="span8">
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
 			
-				<div id="main">
-					
-
 
 	<h1 class="page-title">Class: Color</h1>
 <section>
 
 <header>
-    <h2>
-        <span class="ancestors"><a href="-_8bit.html">_8bit</a>.</span>
     
-    Color
-    </h2>
-    
-        <div class="class-description"><p>_8bit.Color</p></div>
+        <h2>
+            <span class="ancestors"><a href="-_8bit.html">_8bit</a>.</span>
+        
+        Color
+        </h2>
+        
+            <div class="class-description"><p>_8bit.Color</p></div>
+        
     
 </header>
+
 
 <article>
     <div class="container-overview">
     
-
-    
         
+<hr>
 <dt>
-    <h4 class="name" id="Color"><span class="type-signature"></span>new Color<span class="signature">(<span class="optional">r</span>, <span class="optional">g</span>, <span class="optional">b</span>)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="Color"><span class="type-signature"></span>new Color( [r] [, g] [, b])</h4>
     
     
 </dt>
 <dd>
-    
+
     
     <div class="description">
         <p>Canvas8BitContext.COLOR object</p>
@@ -130,8 +113,9 @@
     
 
     
+
     
-    
+
     
     
         <h5>Parameters:</h5>
@@ -139,25 +123,25 @@
 
 <table class="params table table-striped">
     <thead>
-	<tr>
-		
-		<th>Name</th>
-		
+    <tr>
+        
+        <th>Name</th>
+        
 
-		<th>Type</th>
+        <th>Type</th>
 
-		
-		<th>Argument</th>
-		
+        
+        <th>Argument</th>
+        
 
-		
+        
 
-		<th class="last">Description</th>
-	</tr>
-	</thead>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
 
-	<tbody>
-	
+    <tbody>
+    
 
         <tr>
             
@@ -168,6 +152,7 @@
             
                 
 <span class="param-type">Number</span>
+
 
 
             
@@ -190,7 +175,7 @@
             <td class="description last"><p>red or Uint32</p></td>
         </tr>
 
-	
+    
 
         <tr>
             
@@ -201,6 +186,7 @@
             
                 
 <span class="param-type">Number</span>
+
 
 
             
@@ -223,7 +209,7 @@
             <td class="description last"><p>green</p></td>
         </tr>
 
-	
+    
 
         <tr>
             
@@ -234,6 +220,7 @@
             
                 
 <span class="param-type">Number</span>
+
 
 
             
@@ -256,21 +243,29 @@
             <td class="description last"><p>blue</p></td>
         </tr>
 
-	
-	</tbody>
+    
+    </tbody>
 </table>
 
     
-    
+
     
 <dl class="details">
-	
+    
 
 	
 
 	
 
 	
+
+    
+
+    
+
+    
+
+    
 
 	
 
@@ -293,17 +288,19 @@
 	
 </dl>
 
+
     
+
     
 
     
 
     
+
     
+
     
-    
-    
-    
+
     
 </dd>
 
@@ -327,22 +324,25 @@
 
         <dl>
             
+<hr>
 <dt>
-    <h4 class="name" id="add"><span class="type-signature"></span>add<span class="signature">(c)</span><span class="type-signature"> &rarr; {<a href="-_8bit.Color.html">_8bit.Color</a>}</span></h4>
+    <h4 class="name" id="add"><span class="type-signature"></span>add(c)</h4>
     
     
 </dt>
 <dd>
-    
+
     
     <div class="description">
-        <p>Adds given _8bit.Color to current color of the instance and returns<br>the result as a new _8bit.Color instance.</p>
+        <p>Adds given _8bit.Color to current color of the instance and returns
+the result as a new _8bit.Color instance.</p>
     </div>
     
 
     
+
     
-    
+
     
     
         <h5>Parameters:</h5>
@@ -350,23 +350,23 @@
 
 <table class="params table table-striped">
     <thead>
-	<tr>
-		
-		<th>Name</th>
-		
+    <tr>
+        
+        <th>Name</th>
+        
 
-		<th>Type</th>
+        <th>Type</th>
 
-		
+        
 
-		
+        
 
-		<th class="last">Description</th>
-	</tr>
-	</thead>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
 
-	<tbody>
-	
+    <tbody>
+    
 
         <tr>
             
@@ -379,6 +379,7 @@
 <span class="param-type"><a href="-_8bit.Color.html">_8bit.Color</a></span>
 
 
+
             
             </td>
 
@@ -389,21 +390,29 @@
             <td class="description last"><p>Color object</p></td>
         </tr>
 
-	
-	</tbody>
+    
+    </tbody>
 </table>
 
     
-    
+
     
 <dl class="details">
-	
+    
 
 	
 
 	
 
 	
+
+    
+
+    
+
+    
+
+    
 
 	
 
@@ -426,15 +435,17 @@
 	
 </dl>
 
+
     
+
     
 
     
 
     
+
     
-    
-    
+
     
     <h5>Returns:</h5>
     
@@ -442,41 +453,45 @@
 
 
 <dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
 <span class="param-type"><a href="-_8bit.Color.html">_8bit.Color</a></span>
 
 
-	</dd>
+
+    </dd>
 </dl>
 
 
         
-    
+
     
 </dd>
 
         
             
+<hr>
 <dt>
-    <h4 class="name" id="diff"><span class="type-signature"></span>diff<span class="signature">(c)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    <h4 class="name" id="diff"><span class="type-signature"></span>diff(c)</h4>
     
     
 </dt>
 <dd>
-    
+
     
     <div class="description">
-        <p>Calculates a difference vector (non-squared) between the values<br>of instance and the given color object.</p>
+        <p>Calculates a difference vector (non-squared) between the values
+of instance and the given color object.</p>
     </div>
     
 
     
+
     
-    
+
     
     
         <h5>Parameters:</h5>
@@ -484,23 +499,23 @@
 
 <table class="params table table-striped">
     <thead>
-	<tr>
-		
-		<th>Name</th>
-		
+    <tr>
+        
+        <th>Name</th>
+        
 
-		<th>Type</th>
+        <th>Type</th>
 
-		
+        
 
-		
+        
 
-		<th class="last">Description</th>
-	</tr>
-	</thead>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
 
-	<tbody>
-	
+    <tbody>
+    
 
         <tr>
             
@@ -513,6 +528,7 @@
 <span class="param-type"><a href="-_8bit.Color.html">_8bit.Color</a></span>
 
 
+
             
             </td>
 
@@ -523,21 +539,29 @@
             <td class="description last"><p>Color object</p></td>
         </tr>
 
-	
-	</tbody>
+    
+    </tbody>
 </table>
 
     
-    
+
     
 <dl class="details">
-	
+    
 
 	
 
 	
 
 	
+
+    
+
+    
+
+    
+
+    
 
 	
 
@@ -560,15 +584,17 @@
 	
 </dl>
 
+
     
+
     
 
     
 
     
+
     
-    
-    
+
     
     <h5>Returns:</h5>
     
@@ -580,41 +606,45 @@
 
 
 <dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
 <span class="param-type">number</span>
 
 
-	</dd>
+
+    </dd>
 </dl>
 
 
         
-    
+
     
 </dd>
 
         
             
+<hr>
 <dt>
-    <h4 class="name" id="diffRGB"><span class="type-signature"></span>diffRGB<span class="signature">(r, g, b)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    <h4 class="name" id="diffRGB"><span class="type-signature"></span>diffRGB(r, g, b)</h4>
     
     
 </dt>
 <dd>
-    
+
     
     <div class="description">
-        <p>Calculates a difference vector (non-squared) between the values<br>of instance and the given color object.</p>
+        <p>Calculates a difference vector (non-squared) between the values
+of instance and the given color object.</p>
     </div>
     
 
     
+
     
-    
+
     
     
         <h5>Parameters:</h5>
@@ -622,23 +652,23 @@
 
 <table class="params table table-striped">
     <thead>
-	<tr>
-		
-		<th>Name</th>
-		
+    <tr>
+        
+        <th>Name</th>
+        
 
-		<th>Type</th>
+        <th>Type</th>
 
-		
+        
 
-		
+        
 
-		<th class="last">Description</th>
-	</tr>
-	</thead>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
 
-	<tbody>
-	
+    <tbody>
+    
 
         <tr>
             
@@ -651,6 +681,7 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
@@ -661,7 +692,7 @@
             <td class="description last"><p>Color object</p></td>
         </tr>
 
-	
+    
 
         <tr>
             
@@ -674,6 +705,7 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
@@ -684,7 +716,7 @@
             <td class="description last"><p>Color object</p></td>
         </tr>
 
-	
+    
 
         <tr>
             
@@ -697,6 +729,7 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
@@ -707,21 +740,29 @@
             <td class="description last"><p>Color object</p></td>
         </tr>
 
-	
-	</tbody>
+    
+    </tbody>
 </table>
 
     
-    
+
     
 <dl class="details">
-	
+    
 
 	
 
 	
 
 	
+
+    
+
+    
+
+    
+
+    
 
 	
 
@@ -744,15 +785,17 @@
 	
 </dl>
 
+
     
+
     
 
     
 
     
+
     
-    
-    
+
     
     <h5>Returns:</h5>
     
@@ -764,41 +807,45 @@
 
 
 <dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
 <span class="param-type">number</span>
 
 
-	</dd>
+
+    </dd>
 </dl>
 
 
         
-    
+
     
 </dd>
 
         
             
+<hr>
 <dt>
-    <h4 class="name" id="diffSqrt"><span class="type-signature"></span>diffSqrt<span class="signature">(c)</span><span class="type-signature"> &rarr; {number}</span></h4>
+    <h4 class="name" id="diffSqrt"><span class="type-signature"></span>diffSqrt(c)</h4>
     
     
 </dt>
 <dd>
-    
+
     
     <div class="description">
-        <p>Calculates a difference vector (squared) between the values<br>of instance and the given color object.</p>
+        <p>Calculates a difference vector (squared) between the values
+of instance and the given color object.</p>
     </div>
     
 
     
+
     
-    
+
     
     
         <h5>Parameters:</h5>
@@ -806,23 +853,23 @@
 
 <table class="params table table-striped">
     <thead>
-	<tr>
-		
-		<th>Name</th>
-		
+    <tr>
+        
+        <th>Name</th>
+        
 
-		<th>Type</th>
+        <th>Type</th>
 
-		
+        
 
-		
+        
 
-		<th class="last">Description</th>
-	</tr>
-	</thead>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
 
-	<tbody>
-	
+    <tbody>
+    
 
         <tr>
             
@@ -835,6 +882,7 @@
 <span class="param-type"><a href="-_8bit.Color.html">_8bit.Color</a></span>
 
 
+
             
             </td>
 
@@ -845,21 +893,29 @@
             <td class="description last"><p>Color object</p></td>
         </tr>
 
-	
-	</tbody>
+    
+    </tbody>
 </table>
 
     
-    
+
     
 <dl class="details">
-	
+    
 
 	
 
 	
 
 	
+
+    
+
+    
+
+    
+
+    
 
 	
 
@@ -882,15 +938,17 @@
 	
 </dl>
 
+
     
+
     
 
     
 
     
+
     
-    
-    
+
     
     <h5>Returns:</h5>
     
@@ -902,41 +960,48 @@
 
 
 <dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
 <span class="param-type">number</span>
 
 
-	</dd>
+
+    </dd>
 </dl>
 
 
         
-    
+
     
 </dd>
 
         
             
+<hr>
 <dt>
-    <h4 class="name" id="getToleranceRange"><span class="type-signature"></span>getToleranceRange<span class="signature">(tolerance)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+    <h4 class="name" id="getToleranceRange"><span class="type-signature"></span>getToleranceRange(tolerance)</h4>
     
     
 </dt>
 <dd>
-    
+
     
     <div class="description">
-        <p>Returns an object with min and max properties containing new<br>_8bit.Color objects adjusted for tolerance. Tolerance is a<br>fraction of 255 which is subtracted and added to the new<br>objects respectively. The values will in any case be maxed at 255<br>and never be less than 0.</p>
+        <p>Returns an object with min and max properties containing new
+_8bit.Color objects adjusted for tolerance. Tolerance is a
+fraction of 255 which is subtracted and added to the new
+objects respectively. The values will in any case be maxed at 255
+and never be less than 0.</p>
     </div>
     
 
     
+
     
-    
+
     
     
         <h5>Parameters:</h5>
@@ -944,23 +1009,23 @@
 
 <table class="params table table-striped">
     <thead>
-	<tr>
-		
-		<th>Name</th>
-		
+    <tr>
+        
+        <th>Name</th>
+        
 
-		<th>Type</th>
+        <th>Type</th>
 
-		
+        
 
-		
+        
 
-		<th class="last">Description</th>
-	</tr>
-	</thead>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
 
-	<tbody>
-	
+    <tbody>
+    
 
         <tr>
             
@@ -973,6 +1038,7 @@
 <span class="param-type">Number</span>
 
 
+
             
             </td>
 
@@ -983,21 +1049,29 @@
             <td class="description last"><p>Tolerance in the range [0.0, 1.0]</p></td>
         </tr>
 
-	
-	</tbody>
+    
+    </tbody>
 </table>
 
     
-    
+
     
 <dl class="details">
-	
+    
 
 	
 
 	
 
 	
+
+    
+
+    
+
+    
+
+    
 
 	
 
@@ -1020,15 +1094,17 @@
 	
 </dl>
 
+
     
+
     
 
     
 
     
+
     
-    
-    
+
     
     <h5>Returns:</h5>
     
@@ -1036,53 +1112,65 @@
 
 
 <dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
 <span class="param-type">Object</span>
 
 
-	</dd>
+
+    </dd>
 </dl>
 
 
         
-    
+
     
 </dd>
 
         
             
+<hr>
 <dt>
-    <h4 class="name" id="invert"><span class="type-signature"></span>invert<span class="signature">()</span><span class="type-signature"> &rarr; {<a href="-_8bit.Color.html">_8bit.Color</a>}</span></h4>
+    <h4 class="name" id="invert"><span class="type-signature"></span>invert()</h4>
     
     
 </dt>
 <dd>
-    
+
     
     <div class="description">
-        <p>Inverts the current RGB and returns the result as a new<br>_8bit.Color instance.</p>
+        <p>Inverts the current RGB and returns the result as a new
+_8bit.Color instance.</p>
     </div>
     
 
     
+
+    
+
     
     
-    
-    
-    
+
     
 <dl class="details">
-	
+    
 
 	
 
 	
 
 	
+
+    
+
+    
+
+    
+
+    
 
 	
 
@@ -1105,15 +1193,17 @@
 	
 </dl>
 
+
     
+
     
 
     
 
     
+
     
-    
-    
+
     
     <h5>Returns:</h5>
     
@@ -1121,41 +1211,46 @@
 
 
 <dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
 <span class="param-type"><a href="-_8bit.Color.html">_8bit.Color</a></span>
 
 
-	</dd>
+
+    </dd>
 </dl>
 
 
         
-    
+
     
 </dd>
 
         
             
+<hr>
 <dt>
-    <h4 class="name" id="lshift"><span class="type-signature"></span>lshift<span class="signature">(bits)</span><span class="type-signature"> &rarr; {<a href="-_8bit.Color.html">_8bit.Color</a>}</span></h4>
+    <h4 class="name" id="lshift"><span class="type-signature"></span>lshift(bits)</h4>
     
     
 </dt>
 <dd>
-    
+
     
     <div class="description">
-        <p>Bit-shifts current component values number of bit places given<br>by bits to the left and returns the result as a new _8bit.Color<br>instance.</p>
+        <p>Bit-shifts current component values number of bit places given
+by bits to the left and returns the result as a new _8bit.Color
+instance.</p>
     </div>
     
 
     
+
     
-    
+
     
     
         <h5>Parameters:</h5>
@@ -1163,23 +1258,23 @@
 
 <table class="params table table-striped">
     <thead>
-	<tr>
-		
-		<th>Name</th>
-		
+    <tr>
+        
+        <th>Name</th>
+        
 
-		<th>Type</th>
+        <th>Type</th>
 
-		
+        
 
-		
+        
 
-		<th class="last">Description</th>
-	</tr>
-	</thead>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
 
-	<tbody>
-	
+    <tbody>
+    
 
         <tr>
             
@@ -1197,21 +1292,29 @@
             <td class="description last"><p>Number of bits to shift</p></td>
         </tr>
 
-	
-	</tbody>
+    
+    </tbody>
 </table>
 
     
-    
+
     
 <dl class="details">
-	
+    
 
 	
 
 	
 
 	
+
+    
+
+    
+
+    
+
+    
 
 	
 
@@ -1234,15 +1337,17 @@
 	
 </dl>
 
+
     
+
     
 
     
 
     
+
     
-    
-    
+
     
     <h5>Returns:</h5>
     
@@ -1250,41 +1355,46 @@
 
 
 <dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
 <span class="param-type"><a href="-_8bit.Color.html">_8bit.Color</a></span>
 
 
-	</dd>
+
+    </dd>
 </dl>
 
 
         
-    
+
     
 </dd>
 
         
             
+<hr>
 <dt>
-    <h4 class="name" id="mix"><span class="type-signature"></span>mix<span class="signature">(c, t)</span><span class="type-signature"> &rarr; {<a href="-_8bit.Color.html">_8bit.Color</a>}</span></h4>
+    <h4 class="name" id="mix"><span class="type-signature"></span>mix(c, t)</h4>
     
     
 </dt>
 <dd>
-    
+
     
     <div class="description">
-        <p>Returns a new _8bit.Color object holding the mixed<br>values from this instance (full when t=0) and the given (full<br>when t=1).</p>
+        <p>Returns a new _8bit.Color object holding the mixed
+values from this instance (full when t=0) and the given (full
+when t=1).</p>
     </div>
     
 
     
+
     
-    
+
     
     
         <h5>Parameters:</h5>
@@ -1292,23 +1402,23 @@
 
 <table class="params table table-striped">
     <thead>
-	<tr>
-		
-		<th>Name</th>
-		
+    <tr>
+        
+        <th>Name</th>
+        
 
-		<th>Type</th>
+        <th>Type</th>
 
-		
+        
 
-		
+        
 
-		<th class="last">Description</th>
-	</tr>
-	</thead>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
 
-	<tbody>
-	
+    <tbody>
+    
 
         <tr>
             
@@ -1319,6 +1429,7 @@
             
                 
 <span class="param-type"><a href="-_8bit.Color.html">_8bit.Color</a></span>
+
 
 
             
@@ -1331,7 +1442,7 @@
             <td class="description last"><p>color to mix with</p></td>
         </tr>
 
-	
+    
 
         <tr>
             
@@ -1344,6 +1455,7 @@
 <span class="param-type">number</span>
 
 
+
             
             </td>
 
@@ -1354,21 +1466,29 @@
             <td class="description last"><p>mix factor in the range [0.0, 1.0] where 0 = this instance, 1 = given color</p></td>
         </tr>
 
-	
-	</tbody>
+    
+    </tbody>
 </table>
 
     
-    
+
     
 <dl class="details">
-	
+    
 
 	
 
 	
 
 	
+
+    
+
+    
+
+    
+
+    
 
 	
 
@@ -1391,15 +1511,17 @@
 	
 </dl>
 
+
     
+
     
 
     
 
     
+
     
-    
-    
+
     
     <h5>Returns:</h5>
     
@@ -1407,41 +1529,45 @@
 
 
 <dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
 <span class="param-type"><a href="-_8bit.Color.html">_8bit.Color</a></span>
 
 
-	</dd>
+
+    </dd>
 </dl>
 
 
         
-    
+
     
 </dd>
 
         
             
+<hr>
 <dt>
-    <h4 class="name" id="mul"><span class="type-signature"></span>mul<span class="signature">(f)</span><span class="type-signature"> &rarr; {<a href="-_8bit.Color.html">_8bit.Color</a>}</span></h4>
+    <h4 class="name" id="mul"><span class="type-signature"></span>mul(f)</h4>
     
     
 </dt>
 <dd>
-    
+
     
     <div class="description">
-        <p>Multiplies given _8bit.Color to current color of the instance and<br>returns the result as a new _8bit.Color instance.</p>
+        <p>Multiplies given _8bit.Color to current color of the instance and
+returns the result as a new _8bit.Color instance.</p>
     </div>
     
 
     
+
     
-    
+
     
     
         <h5>Parameters:</h5>
@@ -1449,23 +1575,23 @@
 
 <table class="params table table-striped">
     <thead>
-	<tr>
-		
-		<th>Name</th>
-		
+    <tr>
+        
+        <th>Name</th>
+        
 
-		<th>Type</th>
+        <th>Type</th>
 
-		
+        
 
-		
+        
 
-		<th class="last">Description</th>
-	</tr>
-	</thead>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
 
-	<tbody>
-	
+    <tbody>
+    
 
         <tr>
             
@@ -1478,6 +1604,7 @@
 <span class="param-type">Number</span>
 
 
+
             
             </td>
 
@@ -1488,21 +1615,29 @@
             <td class="description last"><p>Multiplication factor</p></td>
         </tr>
 
-	
-	</tbody>
+    
+    </tbody>
 </table>
 
     
-    
+
     
 <dl class="details">
-	
+    
 
 	
 
 	
 
 	
+
+    
+
+    
+
+    
+
+    
 
 	
 
@@ -1525,15 +1660,17 @@
 	
 </dl>
 
+
     
+
     
 
     
 
     
+
     
-    
-    
+
     
     <h5>Returns:</h5>
     
@@ -1541,41 +1678,46 @@
 
 
 <dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
 <span class="param-type"><a href="-_8bit.Color.html">_8bit.Color</a></span>
 
 
-	</dd>
+
+    </dd>
 </dl>
 
 
         
-    
+
     
 </dd>
 
         
             
+<hr>
 <dt>
-    <h4 class="name" id="rshift"><span class="type-signature"></span>rshift<span class="signature">(bits)</span><span class="type-signature"> &rarr; {<a href="-_8bit.Color.html">_8bit.Color</a>}</span></h4>
+    <h4 class="name" id="rshift"><span class="type-signature"></span>rshift(bits)</h4>
     
     
 </dt>
 <dd>
-    
+
     
     <div class="description">
-        <p>Bit-shifts current component values number of bit places given<br>by bits to the right and returns the result as a new _8bit.Color<br>instance.</p>
+        <p>Bit-shifts current component values number of bit places given
+by bits to the right and returns the result as a new _8bit.Color
+instance.</p>
     </div>
     
 
     
+
     
-    
+
     
     
         <h5>Parameters:</h5>
@@ -1583,23 +1725,23 @@
 
 <table class="params table table-striped">
     <thead>
-	<tr>
-		
-		<th>Name</th>
-		
+    <tr>
+        
+        <th>Name</th>
+        
 
-		<th>Type</th>
+        <th>Type</th>
 
-		
+        
 
-		
+        
 
-		<th class="last">Description</th>
-	</tr>
-	</thead>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
 
-	<tbody>
-	
+    <tbody>
+    
 
         <tr>
             
@@ -1612,6 +1754,7 @@
 <span class="param-type">Number</span>
 
 
+
             
             </td>
 
@@ -1622,21 +1765,29 @@
             <td class="description last"><p>Number of bits to shift</p></td>
         </tr>
 
-	
-	</tbody>
+    
+    </tbody>
 </table>
 
     
-    
+
     
 <dl class="details">
-	
+    
 
 	
 
 	
 
 	
+
+    
+
+    
+
+    
+
+    
 
 	
 
@@ -1659,15 +1810,17 @@
 	
 </dl>
 
+
     
+
     
 
     
 
     
+
     
-    
-    
+
     
     <h5>Returns:</h5>
     
@@ -1675,41 +1828,46 @@
 
 
 <dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
 <span class="param-type"><a href="-_8bit.Color.html">_8bit.Color</a></span>
 
 
-	</dd>
+
+    </dd>
 </dl>
 
 
         
-    
+
     
 </dd>
 
         
             
+<hr>
 <dt>
-    <h4 class="name" id="setInteger"><span class="type-signature"></span>setInteger<span class="signature">(i)</span><span class="type-signature"> &rarr; {<a href="-_8bit.Color.html">_8bit.Color</a>}</span></h4>
+    <h4 class="name" id="setInteger"><span class="type-signature"></span>setInteger(i)</h4>
     
     
 </dt>
 <dd>
-    
+
     
     <div class="description">
-        <p>Updates the current instance with new color value based on<br>    the 32-bits integer value. The provided value must reflect the byte-<br>    order of the system. Updates the RGB properties.</p>
+        <p>Updates the current instance with new color value based on
+    the 32-bits integer value. The provided value must reflect the byte-
+    order of the system. Updates the RGB properties.</p>
     </div>
     
 
     
+
     
-    
+
     
     
         <h5>Parameters:</h5>
@@ -1717,23 +1875,23 @@
 
 <table class="params table table-striped">
     <thead>
-	<tr>
-		
-		<th>Name</th>
-		
+    <tr>
+        
+        <th>Name</th>
+        
 
-		<th>Type</th>
+        <th>Type</th>
 
-		
+        
 
-		
+        
 
-		<th class="last">Description</th>
-	</tr>
-	</thead>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
 
-	<tbody>
-	
+    <tbody>
+    
 
         <tr>
             
@@ -1746,6 +1904,7 @@
 <span class="param-type">Number</span>
 
 
+
             
             </td>
 
@@ -1756,21 +1915,29 @@
             <td class="description last"><p>Integer representation of a color.</p></td>
         </tr>
 
-	
-	</tbody>
+    
+    </tbody>
 </table>
 
     
-    
+
     
 <dl class="details">
-	
+    
 
 	
 
 	
 
 	
+
+    
+
+    
+
+    
+
+    
 
 	
 
@@ -1793,15 +1960,17 @@
 	
 </dl>
 
+
     
+
     
 
     
 
     
+
     
-    
-    
+
     
     <h5>Returns:</h5>
     
@@ -1809,41 +1978,46 @@
 
 
 <dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
 <span class="param-type"><a href="-_8bit.Color.html">_8bit.Color</a></span>
 
 
-	</dd>
+
+    </dd>
 </dl>
 
 
         
-    
+
     
 </dd>
 
         
             
+<hr>
 <dt>
-    <h4 class="name" id="setRGB"><span class="type-signature"></span>setRGB<span class="signature">(r, g, b)</span><span class="type-signature"> &rarr; {<a href="-_8bit.Color.html">_8bit.Color</a>}</span></h4>
+    <h4 class="name" id="setRGB"><span class="type-signature"></span>setRGB(r, g, b)</h4>
     
     
 </dt>
 <dd>
-    
+
     
     <div class="description">
-        <p>Set new color values for this instance. Use this method instead of<br>setting the RGB properties directly if you need the integer<br>representation.</p>
+        <p>Set new color values for this instance. Use this method instead of
+setting the RGB properties directly if you need the integer
+representation.</p>
     </div>
     
 
     
+
     
-    
+
     
     
         <h5>Parameters:</h5>
@@ -1851,23 +2025,23 @@
 
 <table class="params table table-striped">
     <thead>
-	<tr>
-		
-		<th>Name</th>
-		
+    <tr>
+        
+        <th>Name</th>
+        
 
-		<th>Type</th>
+        <th>Type</th>
 
-		
+        
 
-		
+        
 
-		<th class="last">Description</th>
-	</tr>
-	</thead>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
 
-	<tbody>
-	
+    <tbody>
+    
 
         <tr>
             
@@ -1880,6 +2054,7 @@
 <span class="param-type">Number</span>
 
 
+
             
             </td>
 
@@ -1890,7 +2065,7 @@
             <td class="description last"><p>red</p></td>
         </tr>
 
-	
+    
 
         <tr>
             
@@ -1903,6 +2078,7 @@
 <span class="param-type">Number</span>
 
 
+
             
             </td>
 
@@ -1913,7 +2089,7 @@
             <td class="description last"><p>green</p></td>
         </tr>
 
-	
+    
 
         <tr>
             
@@ -1926,6 +2102,7 @@
 <span class="param-type">Number</span>
 
 
+
             
             </td>
 
@@ -1936,21 +2113,29 @@
             <td class="description last"><p>blue</p></td>
         </tr>
 
-	
-	</tbody>
+    
+    </tbody>
 </table>
 
     
-    
+
     
 <dl class="details">
-	
+    
 
 	
 
 	
 
 	
+
+    
+
+    
+
+    
+
+    
 
 	
 
@@ -1973,15 +2158,17 @@
 	
 </dl>
 
+
     
+
     
 
     
 
     
+
     
-    
-    
+
     
     <h5>Returns:</h5>
     
@@ -1989,41 +2176,45 @@
 
 
 <dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
 <span class="param-type"><a href="-_8bit.Color.html">_8bit.Color</a></span>
 
 
-	</dd>
+
+    </dd>
 </dl>
 
 
         
-    
+
     
 </dd>
 
         
             
+<hr>
 <dt>
-    <h4 class="name" id="sub"><span class="type-signature"></span>sub<span class="signature">(c)</span><span class="type-signature"> &rarr; {<a href="-_8bit.Color.html">_8bit.Color</a>}</span></h4>
+    <h4 class="name" id="sub"><span class="type-signature"></span>sub(c)</h4>
     
     
 </dt>
 <dd>
-    
+
     
     <div class="description">
-        <p>Subtracts given _8bit.Color to current color of the instance and<br>returns the result as a new _8bit.Color instance.</p>
+        <p>Subtracts given _8bit.Color to current color of the instance and
+returns the result as a new _8bit.Color instance.</p>
     </div>
     
 
     
+
     
-    
+
     
     
         <h5>Parameters:</h5>
@@ -2031,23 +2222,23 @@
 
 <table class="params table table-striped">
     <thead>
-	<tr>
-		
-		<th>Name</th>
-		
+    <tr>
+        
+        <th>Name</th>
+        
 
-		<th>Type</th>
+        <th>Type</th>
 
-		
+        
 
-		
+        
 
-		<th class="last">Description</th>
-	</tr>
-	</thead>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
 
-	<tbody>
-	
+    <tbody>
+    
 
         <tr>
             
@@ -2060,6 +2251,7 @@
 <span class="param-type"><a href="-_8bit.Color.html">_8bit.Color</a></span>
 
 
+
             
             </td>
 
@@ -2070,21 +2262,29 @@
             <td class="description last"><p>Color object</p></td>
         </tr>
 
-	
-	</tbody>
+    
+    </tbody>
 </table>
 
     
-    
+
     
 <dl class="details">
-	
+    
 
 	
 
 	
 
 	
+
+    
+
+    
+
+    
+
+    
 
 	
 
@@ -2107,15 +2307,17 @@
 	
 </dl>
 
+
     
+
     
 
     
 
     
+
     
-    
-    
+
     
     <h5>Returns:</h5>
     
@@ -2123,41 +2325,47 @@
 
 
 <dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
 <span class="param-type"><a href="-_8bit.Color.html">_8bit.Color</a></span>
 
 
-	</dd>
+
+    </dd>
 </dl>
 
 
         
-    
+
     
 </dd>
 
         
             
+<hr>
 <dt>
-    <h4 class="name" id="threshold"><span class="type-signature"></span>threshold<span class="signature">(t)</span><span class="type-signature"> &rarr; {<a href="-_8bit.Color.html">_8bit.Color</a>}</span></h4>
+    <h4 class="name" id="threshold"><span class="type-signature"></span>threshold(t)</h4>
     
     
 </dt>
 <dd>
-    
+
     
     <div class="description">
-        <p>Returns a black or white color object depending on current color<br>and threshold value. The current color is converted to a luma<br>value and if below threshold a black color is returned, above a<br>white color is returned</p>
+        <p>Returns a black or white color object depending on current color
+and threshold value. The current color is converted to a luma
+value and if below threshold a black color is returned, above a
+white color is returned</p>
     </div>
     
 
     
+
     
-    
+
     
     
         <h5>Parameters:</h5>
@@ -2165,23 +2373,23 @@
 
 <table class="params table table-striped">
     <thead>
-	<tr>
-		
-		<th>Name</th>
-		
+    <tr>
+        
+        <th>Name</th>
+        
 
-		<th>Type</th>
+        <th>Type</th>
 
-		
+        
 
-		
+        
 
-		<th class="last">Description</th>
-	</tr>
-	</thead>
+        <th class="last">Description</th>
+    </tr>
+    </thead>
 
-	<tbody>
-	
+    <tbody>
+    
 
         <tr>
             
@@ -2194,6 +2402,7 @@
 <span class="param-type">Number</span>
 
 
+
             
             </td>
 
@@ -2204,21 +2413,29 @@
             <td class="description last"><p>Threshold value [0, 255] inclusive</p></td>
         </tr>
 
-	
-	</tbody>
+    
+    </tbody>
 </table>
 
     
-    
+
     
 <dl class="details">
-	
+    
 
 	
 
 	
 
 	
+
+    
+
+    
+
+    
+
+    
 
 	
 
@@ -2241,15 +2458,17 @@
 	
 </dl>
 
+
     
+
     
 
     
 
     
+
     
-    
-    
+
     
     <h5>Returns:</h5>
     
@@ -2257,32 +2476,34 @@
 
 
 <dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
 <span class="param-type"><a href="-_8bit.Color.html">_8bit.Color</a></span>
 
 
-	</dd>
+
+    </dd>
 </dl>
 
 
         
-    
+
     
 </dd>
 
         
             
+<hr>
 <dt>
-    <h4 class="name" id="toArray"><span class="type-signature"></span>toArray<span class="signature">()</span><span class="type-signature"> &rarr; {Array}</span></h4>
+    <h4 class="name" id="toArray"><span class="type-signature"></span>toArray()</h4>
     
     
 </dt>
 <dd>
-    
+
     
     <div class="description">
         <p>Returns the current RGB values as an Array.</p>
@@ -2290,20 +2511,29 @@
     
 
     
+
+    
+
     
     
-    
-    
-    
+
     
 <dl class="details">
-	
+    
 
 	
 
 	
 
 	
+
+    
+
+    
+
+    
+
+    
 
 	
 
@@ -2326,15 +2556,17 @@
 	
 </dl>
 
+
     
+
     
 
     
 
     
+
     
-    
-    
+
     
     <h5>Returns:</h5>
     
@@ -2346,32 +2578,34 @@
 
 
 <dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
 <span class="param-type">Array</span>
 
 
-	</dd>
+
+    </dd>
 </dl>
 
 
         
-    
+
     
 </dd>
 
         
             
+<hr>
 <dt>
-    <h4 class="name" id="toInt"><span class="type-signature"></span>toInt<span class="signature">()</span><span class="type-signature"> &rarr; {Number}</span></h4>
+    <h4 class="name" id="toInt"><span class="type-signature"></span>toInt()</h4>
     
     
 </dt>
 <dd>
-    
+
     
     <div class="description">
         <p>Returns the current RGB values as an integer value.</p>
@@ -2379,20 +2613,29 @@
     
 
     
+
+    
+
     
     
-    
-    
-    
+
     
 <dl class="details">
-	
+    
 
 	
 
 	
 
 	
+
+    
+
+    
+
+    
+
+    
 
 	
 
@@ -2415,15 +2658,17 @@
 	
 </dl>
 
+
     
+
     
 
     
 
     
+
     
-    
-    
+
     
     <h5>Returns:</h5>
     
@@ -2435,53 +2680,65 @@
 
 
 <dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
 <span class="param-type">Number</span>
 
 
-	</dd>
+
+    </dd>
 </dl>
 
 
         
-    
+
     
 </dd>
 
         
             
+<hr>
 <dt>
-    <h4 class="name" id="toObject"><span class="type-signature"></span>toObject<span class="signature">()</span><span class="type-signature"> &rarr; {Object}</span></h4>
+    <h4 class="name" id="toObject"><span class="type-signature"></span>toObject()</h4>
     
     
 </dt>
 <dd>
-    
+
     
     <div class="description">
-        <p>Formats the current RGB values as a simple object with properties<br>r, g, b holding the value for each component.</p>
+        <p>Formats the current RGB values as a simple object with properties
+r, g, b holding the value for each component.</p>
     </div>
     
 
     
+
+    
+
     
     
-    
-    
-    
+
     
 <dl class="details">
-	
+    
 
 	
 
 	
 
 	
+
+    
+
+    
+
+    
+
+    
 
 	
 
@@ -2504,15 +2761,17 @@
 	
 </dl>
 
+
     
+
     
 
     
 
     
+
     
-    
-    
+
     
     <h5>Returns:</h5>
     
@@ -2520,32 +2779,34 @@
 
 
 <dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
 <span class="param-type">Object</span>
 
 
-	</dd>
+
+    </dd>
 </dl>
 
 
         
-    
+
     
 </dd>
 
         
             
+<hr>
 <dt>
-    <h4 class="name" id="toString"><span class="type-signature"></span>toString<span class="signature">()</span><span class="type-signature"> &rarr; {string}</span></h4>
+    <h4 class="name" id="toString"><span class="type-signature"></span>toString()</h4>
     
     
 </dt>
 <dd>
-    
+
     
     <div class="description">
         <p>Formats the current RGB values as a comma-separated string.</p>
@@ -2553,20 +2814,29 @@
     
 
     
+
+    
+
     
     
-    
-    
-    
+
     
 <dl class="details">
-	
+    
 
 	
 
 	
 
 	
+
+    
+
+    
+
+    
+
+    
 
 	
 
@@ -2589,15 +2859,17 @@
 	
 </dl>
 
+
     
+
     
 
     
 
     
+
     
-    
-    
+
     
     <h5>Returns:</h5>
     
@@ -2609,53 +2881,65 @@
 
 
 <dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
 <span class="param-type">string</span>
 
 
-	</dd>
+
+    </dd>
 </dl>
 
 
         
-    
+
     
 </dd>
 
         
             
+<hr>
 <dt>
-    <h4 class="name" id="toStyle"><span class="type-signature"></span>toStyle<span class="signature">()</span><span class="type-signature"> &rarr; {string}</span></h4>
+    <h4 class="name" id="toStyle"><span class="type-signature"></span>toStyle()</h4>
     
     
 </dt>
 <dd>
-    
+
     
     <div class="description">
-        <p>Formats the current RGB values as a string suitable for use<br>with CSS and 2D context.</p>
+        <p>Formats the current RGB values as a string suitable for use
+with CSS and 2D context.</p>
     </div>
     
 
     
+
+    
+
     
     
-    
-    
-    
+
     
 <dl class="details">
-	
+    
 
 	
 
 	
 
 	
+
+    
+
+    
+
+    
+
+    
 
 	
 
@@ -2678,15 +2962,17 @@
 	
 </dl>
 
+
     
+
     
 
     
 
     
+
     
-    
-    
+
     
     <h5>Returns:</h5>
     
@@ -2698,20 +2984,21 @@
 
 
 <dl>
-	<dt>
-		Type
-	</dt>
-	<dd>
-		
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
 <span class="param-type">string</span>
 
 
-	</dd>
+
+    </dd>
 </dl>
 
 
         
-    
+
     
 </dd>
 
@@ -2728,104 +3015,133 @@
 
 
 
-				</div>
-
-				<div class="clearfix"></div>
-				<footer>
-					
-					<p><b><a href='https://github.com/epistemex/'>Epistemex at GitHub</a></b></p>
-					<br />
-					
-					
-		<span class="copyright">
-		Copyright &copy; 2016 Epistemex
-		</span>
-					<br />
-					
-		<span class="jsdoc-message">
-		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a>
-		on Thu Jul 14th 2016 using the <a
-			href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
-		</span>
-				</footer>
-			</div>
-
-			
-			<div class="span3">
-				<div id="toc"></div>
-			</div>
-			
-			<br clear="both">
 		</div>
-
 	</div>
-	<!--<script src="scripts/sunlight.js"></script>-->
-	<script src="scripts/docstrap.lib.js"></script>
-	<script src="scripts/bootstrap-dropdown.js"></script>
-	<script src="scripts/toc.js"></script>
 
-	<script>
-		$( function () {
-			$( "[id*='$']" ).each( function () {
-				var $this = $( this );
+	<div class="clearfix"></div>
 
-				$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
-			} );
-
-			$( "#toc" ).toc( {
-				anchorName  : function ( i, heading, prefix ) {
-					return $( heading ).attr( "id" ) || ( prefix + i );
-				},
-				selectors   : "h1,h2,h3,h4",
-				showAndHide : false,
-				scrollTo    : "100px"
-			} );
-
-			$( "#toc>ul" ).addClass( "nav nav-pills nav-stacked" );
-			$( "#main span[id^='toc']" ).addClass( "toc-shim" );
-			$( '.dropdown-toggle' ).dropdown();
-//			$( ".tutorial-section pre, .readme-section pre" ).addClass( "sunlight-highlight-javascript" ).addClass( "linenums" );
-
-			$( ".tutorial-section pre, .readme-section pre" ).each( function () {
-				var $this = $( this );
-
-				var example = $this.find( "code" );
-				exampleText = example.html();
-				var lang = /{@lang (.*?)}/.exec( exampleText );
-				if ( lang && lang[1] ) {
-					exampleText = exampleText.replace( lang[0], "" );
-					example.html( exampleText );
-					lang = lang[1];
-				} else {
-					lang = "javascript";
-				}
-
-				if ( lang ) {
-
-					$this
-						.addClass( "sunlight-highlight-" + lang )
-						.addClass( "linenums" )
-						.html( example.html() );
-
-				}
-			} );
-
-			Sunlight.highlightAll( {
-				lineNumbers : false,
-				showMenu : true,
-				enableDoclinks : true
-			} );
-		} );
-	 </script>
-
-
-
-	<!--Navigation and Symbol Display-->
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
 	
 
+</div>
+</div>
 
-	<!--Google Analytics-->
+<div class="modal fade" id="searchResults">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Search results</h4>
+      </div>
+      <div class="modal-body"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
+
+<footer>
+
+	<p><b><a href='https://github.com/epistemex/'>Epistemex at GitHub</a></b></p>
+
+
+	<span class="copyright">
+	Copyright &copy; 2016 Epistemex
+	</span>
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a>
 	
+		on Mon Nov 14th 2016
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+<script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : false,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			var id = $( heading ).attr( "id" );
+			return id && id.replace(/\~/g, '-inner-').replace(/\./g, '-static-') || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		SearcherDisplay.init();
+	});
+</script>
 
 </body>
 </html>

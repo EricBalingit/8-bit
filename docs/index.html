@@ -3,104 +3,82 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
 	<title>8-bit Index</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-	<link type="text/css" rel="stylesheet" href="styles/sunlight.dark.css">
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
 
-	<link type="text/css" rel="stylesheet" href="styles/site.cerulean.css">
+	<link type="text/css" rel="stylesheet" href="styles/site.lumen.css">
 
 </head>
 
 <body>
-<div class="container-fluid">
-	<div class="navbar navbar-fixed-top ">
-		<div class="navbar-inner">
-			<a class="brand" href="index.html">8-bit</a>
-			<ul class="nav">
-				
-				<li class="dropdown">
-					<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b
-						class="caret"></b></a>
 
-					<ul class="dropdown-menu ">
-						
-						<li>
-							<a href="-_8bit.html">_8bit</a>
-						</li>
-						
-						<li>
-							<a href="-_8bit.Color.html">_8bit.Color</a>
-						</li>
-						
-						<li>
-							<a href="-_8bit.Matrix.html">_8bit.Matrix</a>
-						</li>
-						
-						<li>
-							<a href="-_8bit.Palette.html">_8bit.Palette</a>
-						</li>
-						
-						<li>
-							<a href="-_8bit.Path2D.html">_8bit.Path2D</a>
-						</li>
-						
-
-					</ul>
-				</li>
-				
-				<li class="dropdown">
-					<a href="tutorials.list.html" class="dropdown-toggle" data-toggle="dropdown">Tutorials<b
-						class="caret"></b></a>
-
-					<ul class="dropdown-menu ">
-						
-						<li>
-							<a href="tutorial-Quick Setup.html">Quick Setup</a>
-						</li>
-						
-
-					</ul>
-				</li>
-				
-				<li class="dropdown">
-					<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b
-						class="caret"></b></a>
-
-					<ul class="dropdown-menu ">
-						
-						<li>
-							<a href="global.html#8-bitContextforHTML5Canvas.">8-bit Context for HTML5 Canvas.</a>
-						</li>
-						
-						<li>
-							<a href="global.html#NO8BITPATCH">NO8BITPATCH</a>
-						</li>
-						
-
-					</ul>
-				</li>
-				
-			</ul>
-		</div>
+<div class="navbar navbar-default navbar-fixed-top ">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">8-bit</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="-_8bit.html">_8bit</a></li><li><a href="-_8bit.Color.html">_8bit.Color</a></li><li><a href="-_8bit.Matrix.html">_8bit.Matrix</a></li><li><a href="-_8bit.Palette.html">_8bit.Palette</a></li><li><a href="-_8bit.Path2D.html">_8bit.Path2D</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="tutorials.list.html" class="dropdown-toggle" data-toggle="dropdown">Tutorials<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="tutorial-Quick Setup.html">Quick Setup</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html#8-bitContextforHTML5Canvas.">8-bit Context for HTML5 Canvas.</a></li><li><a href="global.html#NO8BITPATCH">NO8BITPATCH</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+		<div class="col-sm-3 col-md-3">
+            <form class="navbar-form" role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
 	</div>
 
-	<div class="row-fluid">
+</div>
+</div>
 
-		
-		<div class="span8">
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
 			
-				<div id="main">
-					
-
 
 	
-	<span class="page-title">Index</span>
 	
-	
-
 
 
 
@@ -122,8 +100,11 @@
     <section class="readme-section">
         <article><h1>﻿8-bit</h1><p>##(ALPHA)</p>
 <p>8-bit inspired HTML5 Canvas that allow you to draw palette based, non-aliased graphics.</p>
-<p>Basically built from scratch using low-level methods to get that authentic<br>retro look from pixelated lines, palette based colors to image dithering<br>and more.</p>
-<p>Quickly build classic retro-styled games, sprite editors, 8-bit looking<br>graphics for your web page, drawing applications and so forth.</p>
+<p>Basically built from scratch using low-level methods to get that authentic
+retro look from pixelated lines, palette based colors to image dithering 
+and more.</p>
+<p>Quickly build classic retro-styled games, sprite editors, 8-bit looking
+graphics for your web page, drawing applications and so forth.</p>
 <h2>Features</h2><ul>
 <li>Retro feel guaranteed!</li>
 <li>Free of anti-aliasing and smoothness!</li>
@@ -149,6 +130,30 @@
 <p><img src="http://i.imgur.com/msrnmzw.png" alt="http://i.imgur.com/msrnmzw.png"></p>
 <p><strong>Some test shapes to check even-odd fill mode composited on top</strong>:</p>
 <p><img src="http://i.imgur.com/uyuWAqc.png" alt="http://i.imgur.com/uyuWAqc.png"></p>
+<h2>Brief History</h2><p>8-bit started out as retro-canvas a few years back. The original retro context
+was rooted in more or less the old method of setting things like colors using
+background color, foreground color, and also had its own method names and 
+so forth. It was an experiment at the time to produce in particular
+non-aliased vector graphics (lines, paths etc.) and had indexed palette
+and dithering added to it as it went on.</p>
+<p>It was later decided to scrap the first model and build a context that would
+be 100% compatible with the 2D context, argument wise, so you could actually
+run existing code just replacing the context type. The difference of course
+being that the result would look and feel like retro, or 8-bit if you will.
+It got rebuilt from scratch as a weekend-project with new strategies involved
+such as using existing composition mechanisms to enhance capabilities and
+performance. </p>
+<p>It's still an experiment though and currently it has only implemented the needed
+internal pieces without any particular optimizations. Depending on the interest 
+the project may get allocated more resources and time to grow into something
+useful for perhaps games etc. but its main purpose is for it to be used
+as a building block in generating tools that can easily generate 8-bit
+graphics. Or at least, that is what it's most realistically capable of at
+the moment as running full games with lots of action is probably gonna be 
+too much considering it's using JavaScript to process the data at multiple
+stages. But never say never.. it can run simpler things pretty well due to
+the low resolution implied.</p>
+<p>We'll keep on experimenting and see what we can squeeze out of it.</p>
 <h2>Install</h2><p><strong>8-bit</strong> can be installed in various ways:</p>
 <ul>
 <li>Bower: <code>bower install 8-bit</code></li>
@@ -159,20 +164,31 @@
 <li><a href="https://raw.githubusercontent.com/epistemex/8-bit/master/8-bit.min.js">8-bit.min.js</a></li>
 </ul>
 <p>No tape-loader, sorry!</p>
-<h2>Usage</h2><p>To use the canvas simply create an instance and knock yourselves out! The methods and properties<br>are the same as with 2D canvas, but using palette and low resolution instead.</p>
+<h2>Usage</h2><p>To use the canvas simply create an instance and knock yourselves out! The methods and properties
+are the same as with 2D canvas, but using palette and low resolution instead.</p>
 <pre class="prettyprint source"><code>var canvas = document.getElementById(&quot;myCanvasElement&quot;);
 var ctx = canvas.getContext(&quot;8-bit&quot;);
-...</code></pre><p><strong>(N/A:)</strong> For audio, simply load the audio file using the audio loader. The loaded audio is<br>then handed over to you on a silver plate which brings back the good old HIFI of the past<br>to your speakers.</p>
+...</code></pre><p><strong>(N/A:)</strong> For audio, simply load the audio file using the audio loader. 
+The loaded audio is then handed over and brings back the good old crunchy
+&quot;HIFI&quot; of the past to your speakers.</p>
 <p>More info coming later - star and follow to keep yourself updated!</p>
-<h2>Notes</h2><p>Although the calls are identical as to the ordinary 2D context, it do come<br>with some constraints due to either performance or other reasons such as<br>need for access to internal workings. For these reasons the following<br>object works only with the 8-bit context:</p>
+<h2>Notes</h2><p>Although the calls are identical as to the ordinary 2D context, it do come
+with some constraints due to either performance or other reasons such as
+need for access to internal workings. For these reasons the following
+object works only with the 8-bit context:</p>
 <p><strong>These objects exist due to the need pre-processing and palette dithering:</strong></p>
 <ul>
 <li>_8bit.Image</li>
 <li>_8bit.Pattern</li>
 <li>_8bit.Gradient</li>
 </ul>
-<p>You <em>can</em> use regular images (and video etc.) with the drawImage() method<br>but it will require the image source to be dithered on the fly which is<br>more performance hungry than using the _8bit.Image instance.</p>
-<p>For patterns and gradients you won't notice much difference than with 2D<br>context as you will use the createPattern() and create*Gradient() methods.<br>You operate with them in the same way as before, but they are not<br>interchangeable with ordinary 2D equivalent objects.</p>
+<p>You <em>can</em> use regular images (and video etc.) with the drawImage() method
+but it will require the image source to be dithered on the fly which takes
+a higher performance-hit than using the _8bit.Image instance.</p>
+<p>For patterns and gradients you won't notice much difference than with 2D
+context as you will use the createPattern() and create*Gradient() methods.
+You operate with them in the same way as before, but they are not 
+interchangeable with ordinary 2D equivalent objects.</p>
 <p><strong>These exist due to need for deep access (path data) and compatibility (matrix):</strong></p>
 <ul>
 <li>_8bit.Path2D</li>
@@ -186,8 +202,10 @@ var ctx = canvas.getContext(&quot;8-bit&quot;);
 </ul>
 <h2>Issues</h2><p>See the <a href="https://github.com/epistemex/8-bit/issues">issue tracker</a> for details.</p>
 <p>It's currently in alpha so please be patient.</p>
-<h2>License</h2><p>More information will come later. Consider this a preview repository for<br>the moment. Copyright reserved. Contact us directly (github@epistemex.com)<br>with questions about licensing and usage.</p>
-<p><em>&copy; Epistemex 2016</em></p>
+<h2>License</h2><p>More information will come later. Consider this a preview repository for 
+the moment. Copyright reserved. Contact us directly (github@epistemex.com)
+with questions about licensing and usage.</p>
+<p><em>&copy; Epistemex 2013-2016</em></p>
 <p><img src="http://i.imgur.com/wZSsyt8.png" alt="Epistemex"></p></article>
     </section>
 
@@ -197,104 +215,133 @@ var ctx = canvas.getContext(&quot;8-bit&quot;);
 
 
 
-				</div>
-
-				<div class="clearfix"></div>
-				<footer>
-					
-					<p><b><a href='https://github.com/epistemex/'>Epistemex at GitHub</a></b></p>
-					<br />
-					
-					
-		<span class="copyright">
-		Copyright &copy; 2016 Epistemex
-		</span>
-					<br />
-					
-		<span class="jsdoc-message">
-		Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a>
-		on Thu Jul 14th 2016 using the <a
-			href="https://github.com/terryweiss/docstrap">DocStrap template</a>.
-		</span>
-				</footer>
-			</div>
-
-			
-			<div class="span3">
-				<div id="toc"></div>
-			</div>
-			
-			<br clear="both">
 		</div>
-
 	</div>
-	<!--<script src="scripts/sunlight.js"></script>-->
-	<script src="scripts/docstrap.lib.js"></script>
-	<script src="scripts/bootstrap-dropdown.js"></script>
-	<script src="scripts/toc.js"></script>
 
-	<script>
-		$( function () {
-			$( "[id*='$']" ).each( function () {
-				var $this = $( this );
+	<div class="clearfix"></div>
 
-				$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
-			} );
-
-			$( "#toc" ).toc( {
-				anchorName  : function ( i, heading, prefix ) {
-					return $( heading ).attr( "id" ) || ( prefix + i );
-				},
-				selectors   : "h1,h2,h3,h4",
-				showAndHide : false,
-				scrollTo    : "100px"
-			} );
-
-			$( "#toc>ul" ).addClass( "nav nav-pills nav-stacked" );
-			$( "#main span[id^='toc']" ).addClass( "toc-shim" );
-			$( '.dropdown-toggle' ).dropdown();
-//			$( ".tutorial-section pre, .readme-section pre" ).addClass( "sunlight-highlight-javascript" ).addClass( "linenums" );
-
-			$( ".tutorial-section pre, .readme-section pre" ).each( function () {
-				var $this = $( this );
-
-				var example = $this.find( "code" );
-				exampleText = example.html();
-				var lang = /{@lang (.*?)}/.exec( exampleText );
-				if ( lang && lang[1] ) {
-					exampleText = exampleText.replace( lang[0], "" );
-					example.html( exampleText );
-					lang = lang[1];
-				} else {
-					lang = "javascript";
-				}
-
-				if ( lang ) {
-
-					$this
-						.addClass( "sunlight-highlight-" + lang )
-						.addClass( "linenums" )
-						.html( example.html() );
-
-				}
-			} );
-
-			Sunlight.highlightAll( {
-				lineNumbers : false,
-				showMenu : true,
-				enableDoclinks : true
-			} );
-		} );
-	 </script>
-
-
-
-	<!--Navigation and Symbol Display-->
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
 	
 
+</div>
+</div>
 
-	<!--Google Analytics-->
+<div class="modal fade" id="searchResults">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Search results</h4>
+      </div>
+      <div class="modal-body"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
+
+<footer>
+
+	<p><b><a href='https://github.com/epistemex/'>Epistemex at GitHub</a></b></p>
+
+
+	<span class="copyright">
+	Copyright &copy; 2016 Epistemex
+	</span>
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a>
 	
+		on Mon Nov 14th 2016
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+<script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : false,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			var id = $( heading ).attr( "id" );
+			return id && id.replace(/\~/g, '-inner-').replace(/\./g, '-static-') || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		SearcherDisplay.init();
+	});
+</script>
 
 </body>
 </html>
