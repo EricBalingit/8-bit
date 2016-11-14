@@ -1,6 +1,9 @@
 Change log for 8-bit
 --------------------
 
+0.4.2
+FIX: save/restore object reference error with the matrix
+
 0.4.1
 FIX: default comp mode source-over if mode not supported
 FIX: imageSmoothingQuality defaults to low if mode not supported

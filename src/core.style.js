@@ -35,7 +35,6 @@ _8bit.Style = function(palette, value, isStrict) {
 	else if (value instanceof _8bit.Gradient) {
 		this.type = _8bit.Style.type.gradient;
 	}
-
 };
 
 _8bit.Style.type = {
