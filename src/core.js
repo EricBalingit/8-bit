@@ -1,5 +1,5 @@
 /*!
-	8-bit ver 0.4.1 alpha
+	8-bit ver 0.4.2 alpha
 	(c) 2013-2016 Epistemex
 	www.epistemex.com
 	Copyrighted. Preview version! No license given at this point.
@@ -37,7 +37,6 @@ function _8bit(canvas, options) {
 
 		stack,															// save/restore stack
 		state,
-		matrix,															// internal matrix
 		iPath,															// internal path (first initialized in init)
 		palette,
 
@@ -130,7 +129,6 @@ function _8bit(canvas, options) {
 		var s = stack.splice(stack.length - 1)[0];
 		if (s) {
 			state = s;
-			matrix = state.matrix;
 		}
 		return me
 	};
@@ -155,7 +153,7 @@ function _8bit(canvas, options) {
 	------------------------------------------------------------------*/
 
 	this.beginPath = function() {
-		iPath = new _8bit.Path2D(matrix);
+		iPath = new _8bit.Path2D(state.matrix);
 		return this
 	};
 
@@ -270,7 +268,7 @@ function _8bit(canvas, options) {
 	};
 
 	this.strokeRect = function(x, y, w, h) {
-		var path = new _8bit.Path2D(matrix);
+		var path = new _8bit.Path2D(state.matrix);
 		path.rect(x, y, w, h);
 		path.closePath();
 		me.stroke(path);
@@ -278,7 +276,7 @@ function _8bit(canvas, options) {
 	};
 
 	this.fillRect = function(x, y, w, h) {
-		var path = new _8bit.Path2D(matrix);
+		var path = new _8bit.Path2D(state.matrix);
 		path.rect(x, y, w, h);
 		path.closePath();
 		me.fill(path);
@@ -301,13 +299,13 @@ function _8bit(canvas, options) {
 
 	------------------------------------------------------------------*/
 
-	this.getTransform = function() {return matrix};
-	this.setTransform = function(a,b,c,d,e,f) {matrix.setTransform(a,b,c,d,e,f); return me};
-	this.transform = function(a,b,c,d,e,f) {matrix.transform(a,b,c,d,e,f); return me};
-	this.rotate = function(a) {matrix.rotate(a); return me};
-	this.translate = function(x, y) {matrix.translate(x, y); return me};
-	this.scale = function(sx, sy) {matrix.scale(sx, sy); return me};
-	this.resetTransform = function() {matrix.reset(); return me};
+	this.getTransform = function() {return state.matrix};
+	this.setTransform = function(a,b,c,d,e,f) {state.matrix.setTransform(a,b,c,d,e,f); return me};
+	this.transform = function(a,b,c,d,e,f) {state.matrix.transform(a,b,c,d,e,f); return me};
+	this.rotate = function(a) {state.matrix.rotate(a); return me};
+	this.translate = function(x, y) {state.matrix.translate(x, y); return me};
+	this.scale = function(sx, sy) {state.matrix.scale(sx, sy); return me};
+	this.resetTransform = function() {state.matrix.reset(); return me};
 
 	/*------------------------------------------------------------------
 
@@ -410,7 +408,7 @@ function _8bit(canvas, options) {
 
 		stack = [];
 		state = new _8bit.State(palette);
-		matrix = state.matrix;
+		//matrix = state.matrix;
 
 		me.aspect = {
 			x: w / canvas.width,
