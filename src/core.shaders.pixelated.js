@@ -1,6 +1,6 @@
 /*
 	8-bit render module
-	© 2016 Epistemex
+	ï¿½ 2016 Epistemex
 	www.epistemex.com
 */
 
@@ -175,11 +175,30 @@ _8bit.Shaders.Pixelated.prototype = {
 		this.ctx.putImageData(idata, 0, 0);
 
 		function renderSolid(ranges) {
-			var i = 0, r;
-			while(r = ranges[i++]) {
-				for(var p, x = Math.max(0, r.x1), y = r.y, x2 = Math.min(w, r.x2); x < x2; x++) {
-					p = y * w + x;
-					bmp[p] ^= src
+			var i = 0, r, cy = NaN, w;	//  nothing equals NaN, but it's still a number, w is windings
+			if ( type === "even-odd" ) {
+				while(r = ranges[i++]) {
+					for(var p, x = Math.max(0, r.x1), y = r.y, x2 = Math.min(w, r.x2); x < x2; x++) {
+						p = y * w + x;
+						bmp[p] ^= src
+					}
+				}
+			} else {
+				while(r = ranges[i++]) {
+					if ( cy !== r.y ) {
+						cy = r.y;
+						w = r.l;
+					} else {
+						w = w + r.l;
+					}
+					if ( w !== 0 ) { 
+						for(var p, x = Math.max(0, r.x1), y = r.y, x2 = Math.min(w, r.x2); x < x2; x++) {
+							p = y * w + x;
+							bmp[p] ^= src
+						}
+						
+						w = w + r.r;
+					}
 				}
 			}
 		}
@@ -209,12 +228,16 @@ _8bit.Shaders.Pixelated.prototype = {
 				for(t = 0; t < len - 3; t += 2) {
 					if ((points[t+1] <= y && points[t+3] >= y) || (points[t+3] <= y && points[t+1] >= y)) {
 						pt = getIntersection(-0xffff, y, 0xffff, points[t] + 0.5, points[t+1], points[t+2] + 0.5, points[t+3]);
-						if (pt) pts.push(pt)
+						if (pt) {
+							pt.d = points [ t + 1 ] < points [ t + 3 ] ? 1 : -1; 
+							pts.push(pt);
+						}
 					}
 				}
 
 				// end -> start (fill is always closed)
 				pt = getIntersection(-0xffff, y, 0xffff, points[len-2] + 0.5, points[len-1], points[0] + 0.5, points[1]);
+				pt.d = points [ len - 1 ] < points [ 1 ] ? 1 : -1;
 				if (pt) pts.push(pt);
 
 				// sort points and create ranges
@@ -235,16 +258,30 @@ _8bit.Shaders.Pixelated.prototype = {
 					// even-odd ranges
 					for(t = 0; t < pts.length - 1; t += 2) {
 						//if (pts[t] && pts[t+1]) {
+						if ( type === "even-odd" ) {
 							ranges.push({
 								x1: Math.max(0, Math.min(w, Math.round(pts[t  ].x) )),
 								x2: Math.max(0, Math.min(w, Math.round(pts[t+1].x) )),
 								y: pts[t].y|0
 							});
+						} else {
+							ranges.push ({
+								x1: Math.max(0, Math.min(w, Math.round(pts[t  ].x) )),
+								x2: Math.max(0, Math.min(w, Math.round(pts[t+1].x) )),
+								y: pts[t].y|0,
+								l: pts [ t ].d;
+								r: pts [ t + 1 ].d;
+							})
+						}
 						//}
 					}
 				}
 			}
-
+			
+			ranges.sort ( function ( a, b ) {
+				return a.y < b.y ? -1 : a.y > b.y ? 1 : a.x1 < b.x1 ? -1 : a.x1 > b.x1 ? 1 : 0;
+			});
+			
 			return ranges
 		}
 
