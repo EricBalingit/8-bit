@@ -203,11 +203,29 @@ _8bit.Shaders.Pixelated.prototype = {
 		}
 
 		function renderPattGrad(ranges) {
-			var i = 0, r, getPixel = src._getPixel;
-			while(r = ranges[i++]) {
-				for(var p, x = Math.max(0, r.x1), y = r.y, x2 = Math.min(w, r.x2); x < x2; x++) {
-					p = y * w + x;
-					bmp[p] = bmp[p] ? 0 : getPixel(x, y)
+			var i = 0, r, getPixel = src._getPixel, cy = NaN, w;
+			if ( type === "even-odd" ) {
+				while(r = ranges[i++]) {
+					for(var p, x = Math.max(0, r.x1), y = r.y, x2 = Math.min(w, r.x2); x < x2; x++) {
+						p = y * w + x;
+						bmp[p] = bmp[p] ? 0 : getPixel(x, y)
+					}
+				}
+			} else {
+				while(r = ranges[i++]) {
+					if ( cy !== r.y ) {
+						cy = r.y;
+						w = r.l;
+					} else {
+						w = w + r.l;
+					}
+					if ( w !== 0 ) { 
+						for(var p, x = Math.max(0, r.x1), y = r.y, x2 = Math.min(w, r.x2); x < x2; x++) {
+							p = y * w + x;
+							bmp[p] = bmp[p] ? 0 : getPixel(x, y)
+						}
+					}
+					w = w + r.r;
 				}
 			}
 		}
