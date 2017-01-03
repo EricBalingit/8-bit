@@ -196,9 +196,8 @@ _8bit.Shaders.Pixelated.prototype = {
 							p = y * w + x;
 							bmp[p] ^= src
 						}
-						
-						w = w + r.r;
 					}
+					w = w + r.r;
 				}
 			}
 		}
