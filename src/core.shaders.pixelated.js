@@ -286,8 +286,8 @@ _8bit.Shaders.Pixelated.prototype = {
 								x1: Math.max(0, Math.min(w, Math.round(pts[t  ].x) )),
 								x2: Math.max(0, Math.min(w, Math.round(pts[t+1].x) )),
 								y: pts[t].y|0,
-								l: pts [ t ].d;
-								r: pts [ t + 1 ].d;
+								l: pts [ t ].d,
+								r: pts [ t + 1 ].d,
 							})
 						}
 						//}
